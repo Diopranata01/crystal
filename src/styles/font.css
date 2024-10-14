@@ -1,0 +1,8 @@
+/* styles/fonts.css */
+@font-face {
+    font-family: 'Cardo';
+    src: url('../fonts/Cardo-Regular.ttf') format('ttf'),
+         url('../fonts/Cardo-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
