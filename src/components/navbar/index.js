@@ -9,8 +9,8 @@ const Navbar = () => {
       <div className="relative group">
         <button className="focus:outline-none flex flex-col items-center pr-20">
           {/* Hamburger Icon with 2 Bars */}
-          <span className="block w-9 sm:w-12 h-1 bg-[#c4ae86] rounded-md my-2"></span>
-          <span className="block w-9 sm:w-12 h-1 bg-[#c4ae86] rounded-md"></span>
+          <span className="block w-9 sm:w-10 h-1 bg-[#c4ae86] rounded-md my-2"></span>
+          <span className="block w-9 sm:w-10 h-1 bg-[#c4ae86] rounded-md"></span>
         </button>
         {/* Dropdown Menu */}
         <div className="absolute left-0 hidden w-48 mt-2 bg-white rounded-md shadow-lg group-hover:block">
@@ -27,6 +27,7 @@ const Navbar = () => {
             alt="Logo"
             width={200}
             height={200}
+            className='hidden sm:block'
         />
       </div>
 
