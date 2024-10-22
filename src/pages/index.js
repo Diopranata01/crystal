@@ -40,7 +40,7 @@ export default function Home() {
           {/* Image Container */}
           <div className="flex justify-center md:justify-start w-full h-[470px] md:w-[63.5%] overflow-hidden">
             <Image
-              src="/assets/landing_page/2.webp"
+              src="/assets/landing_page/2.JPG"
               alt="Descriptive Image"
               className="transform translate-y-[20%] translate-x-[-2%] scale-[1.48] object-cover"
               width={700}
