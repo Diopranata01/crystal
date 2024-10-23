@@ -1,13 +1,14 @@
 import Image from "next/image"; // components/Footer.js
 
 export default function Footer() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <footer className="bg-[#c4ae86] text-[#000] py-10">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-6 gap-4">
         {/* Left Column - Logo */}
         <div className="flex justify-center md:justify-start items-start">
           <Image
-            src="/logo-crystal-white.png"
+            src={`${basePath}/logo-crystal-white.png`}
             alt="Logo"
             className="h-10 w-auto mt-3"
             width={200}
@@ -46,7 +47,7 @@ export default function Footer() {
             <i className="text-2xl md:text-3xl fa-brands fa-instagram mr-2"></i>
             <i className="text-2xl md:text-3xl fa-brands fa-whatsapp"></i>
             <Image
-              src="/tripadvisor.png"
+              src={`${basePath}/tripadvisor.png`}
               alt="Logo"
               className="h-[1.8rem] md:h-[2.1rem] w-auto"
               width={100}
