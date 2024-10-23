@@ -132,13 +132,32 @@ export default function Home() {
         </div>
 
         {/* Content Stacked Slider */}
-        <div className="relative w-full h-screen grid grid-cols-2 grid-rows-5">
-          <HomeSlider />
-          <HomeSlider />
-          <HomeSlider />
-          <HomeSlider />
-          <HomeSlider />
-          <HomeSlider />
+        <div className="relative w-full h-screen flex">
+          {/* First Column */}
+          <div className="relative flex flex-col w-1/2 h-full">
+            <div className="flex-1">
+              <HomeSlider />
+            </div>
+            <div className="flex-1">
+              <HomeSlider />
+            </div>
+            <div className="flex-1">
+              <HomeSlider />
+            </div>
+          </div>
+
+          {/* Second Column */}
+          <div className="relative flex flex-col w-1/2 h-full">
+            <div className="flex-1">
+              <HomeSlider />
+            </div>
+            <div className="flex-1">
+              <HomeSlider />
+            </div>
+            <div className="flex-1">
+              <HomeSlider />
+            </div>
+          </div>
         </div>
 
         {/* content 2 */}

@@ -38,7 +38,7 @@ const HomeSlider = () => {
   };
 
   return (
-    <div className="relative w-[100%] h-[280px] overflow-hidden">
+    <div className="relative w-[100%] h-[100%] overflow-hidden">
       {/* Slider */}
       {images.map((image, index) => (
         <div
