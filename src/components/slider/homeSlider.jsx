@@ -3,15 +3,16 @@ import Image from "next/image";
 
 const HomeSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const images = [
     {
-      src: "/assets/room/1.webp",
+      src: `${basePath}/assets/room/1.webp`,
       alt: "Executive Suite",
       title: "Executive Suite",
       description: "Live Endless Entertainment at Our Comfort Suites",
     },
     {
-      src: "/assets/room/2.webp",
+      src: `${basePath}/assets/room/2.webp`,
       alt: "Suite Room",
       title: "Suite Room",
       description: "Relax by the beautiful of Suite Room",

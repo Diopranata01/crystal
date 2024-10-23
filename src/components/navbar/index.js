@@ -23,7 +23,7 @@ const Navbar = () => {
       {/* Center Logo */}
       <div className="flex justify-center items-center">
         <Image
-            src='/logo-crystal-white.png'
+            src={`${basePath}/logo-crystal-white.png`}
             alt="Logo"
             width={200}
             height={200}

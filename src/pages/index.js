@@ -11,46 +11,14 @@ import HomeSlider from "@/components/slider/homeSlider";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [
-    {
-      src: "/assets/room/1.webp",
-      alt: "Executive Suite",
-      title: "Executive Suite",
-      description: "Live Endless Entertainment at Our Comfort Suites",
-    },
-    {
-      src: "/assets/room/2.webp",
-      alt: "Suite Room",
-      title: "Suite Room",
-      description: "Relax by the beautiful of Suite Room",
-    },
-    // Add more images as needed
-  ];
-
-  // To automatically move the slider
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change every 5 seconds
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [images.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <div className="min-h-screen p-0">
       {/* Full Width Image with Centered Text at the Top */}
       <div className="relative w-full h-screen overflow-hidden">
         <Image
-          src="/assets/landing_page/main.webp" // Ensure the path is correct
+          src={`${basePath}/assets/landing_page/main.webp`} // Ensure the path is correct
           alt="Crystal Kuta"
           layout="fill" // Use layout fill to make it cover the container
           objectFit="cover" // Ensure the image covers the div
@@ -86,7 +54,7 @@ export default function Home() {
           {/* Image Container */}
           <div className="flex justify-center md:justify-start w-full h-[470px] md:w-[63.5%] overflow-hidden">
             <Image
-              src="/assets/landing_page/2.webp"
+              src={`${basePath}/assets/landing_page/2.webp`}
               alt="Descriptive Image"
               className="transform translate-y-[20%] translate-x-[-2%] scale-[1.48] object-cover"
               width={700}
@@ -165,7 +133,7 @@ export default function Home() {
           {/* Image Container */}
           <div className="flex justify-center md:justify-start w-full h-[350px] md:w-[56.5%] overflow-hidden">
             <Image
-              src="/assets/landing_page/3.webp"
+              src={`${basePath}/assets/landing_page/3.webp`}
               alt="Descriptive Image"
               className="transform translate-y-[-2%] translate-x-[3.5%] scale-[1.3] object-cover"
               width={700}
@@ -237,7 +205,7 @@ export default function Home() {
           {/* Image Container */}
           <div className="flex justify-center md:justify-start w-full h-[440px] md:w-[48.5%] overflow-hidden">
             <Image
-              src="/assets/landing_page/4.webp"
+              src={`${basePath}/assets/landing_page/4.webp`}
               alt="Descriptive Image"
               className="transform translate-y-[-28%] translate-x-[-2%] scale-[1.4] object-cover"
               width={700}
@@ -289,7 +257,7 @@ export default function Home() {
             >
               <SwiperSlide>
                 <Image
-                  src="/assets/landing_page/4.webp"
+                  src={`/assets/landing_page/4.webp`}
                   alt="Descriptive Image"
                   width={500}
                   height={500}
@@ -297,7 +265,7 @@ export default function Home() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/assets/landing_page/5.webp"
+                  src={'/assets/landing_page/5.webp'}
                   alt="Descriptive Image"
                   width={500}
                   height={500}
@@ -305,7 +273,7 @@ export default function Home() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/assets/landing_page/6.webp"
+                  src={`/assets/landing_page/6.webp`}
                   alt="Descriptive Image"
                   width={500}
                   height={500}
@@ -320,7 +288,7 @@ export default function Home() {
           {/* Image Container */}
           <div className="flex justify-center md:justify-start w-full h-[420px] md:w-[54.5%] overflow-hidden">
             <Image
-              src="/assets/landing_page/6.webp"
+              src={`${basePath}/assets/landing_page/6.webp`}
               alt="Descriptive Image"
               className="transform translate-y-[-2%] translate-x-[3.5%] scale-[1.3] object-cover"
               width={700}
@@ -397,7 +365,7 @@ export default function Home() {
             >
               <SwiperSlide>
                 <Image
-                  src="/assets/landing_page/8.webp"
+                  src={`${basePath}/assets/landing_page/8.webp`}
                   alt="Descriptive Image"
                   width={500}
                   height={500}
@@ -405,7 +373,7 @@ export default function Home() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/assets/landing_page/7.webp"
+                  src={`${basePath}/assets/landing_page/7.webp`}
                   alt="Descriptive Image"
                   width={500}
                   height={500}
@@ -413,7 +381,7 @@ export default function Home() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/assets/landing_page/9.webp"
+                  src={`${basePath}/assets/landing_page/9.webp`}
                   alt="Descriptive Image"
                   width={500}
                   height={500}
