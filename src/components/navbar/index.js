@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   // Track scroll position and update the state
   useEffect(() => {

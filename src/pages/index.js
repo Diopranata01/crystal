@@ -257,7 +257,7 @@ export default function Home() {
             >
               <SwiperSlide>
                 <Image
-                  src={`/assets/landing_page/4.webp`}
+                  src={`${basePath}/assets/landing_page/4.webp`}
                   alt="Descriptive Image"
                   width={500}
                   height={500}
@@ -265,7 +265,7 @@ export default function Home() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src={'/assets/landing_page/5.webp'}
+                  src={`${basePath}/assets/landing_page/5.webp`}
                   alt="Descriptive Image"
                   width={500}
                   height={500}
@@ -273,7 +273,7 @@ export default function Home() {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src={`/assets/landing_page/6.webp`}
+                  src={`${basePath}/assets/landing_page/6.webp`}
                   alt="Descriptive Image"
                   width={500}
                   height={500}
