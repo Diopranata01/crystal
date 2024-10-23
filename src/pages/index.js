@@ -10,40 +10,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import HomeSlider from "@/components/slider/homeSlider";
 
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [
-    {
-      src: "/assets/room/1.webp",
-      alt: "Executive Suite",
-      title: "Executive Suite",
-      description: "Live Endless Entertainment at Our Comfort Suites",
-    },
-    {
-      src: "/assets/room/2.webp",
-      alt: "Suite Room",
-      title: "Suite Room",
-      description: "Relax by the beautiful of Suite Room",
-    },
-    // Add more images as needed
-  ];
-
-  // To automatically move the slider
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change every 5 seconds
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [images.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
 
   return (
     <div className="min-h-screen p-0">
@@ -95,12 +61,12 @@ export default function Home() {
           </div>
           {/* Text Container */}
           <div className="flex flex-col justify-center w-full md:w-1/2">
-            <div className="py-4 pt-1">
-              <h1 className="text-2xl md:text-[45px] font-bold italic">
+            <div className="py-4 pt-1 ps-3">
+              <h1 className="text-[25px] lg:text-[30px] xl:text-[45px] font-bold italic">
                 Crystalkuta Hotel - Bali
               </h1>
             </div>
-            <p className="mt-5 mx-3 mr-4 text-md md:text-sm text-justify font-semibold">
+            <p className="mt-5 mx-3 mr-4 text-md md:text-sm text-justify font-regular">
               We are back with new management, more facilities, completed with
               consistent warm hospitality. As a 4-star hotel we will provide you
               with the ultimate comfort and relaxation during your stay in Bali.
@@ -108,7 +74,7 @@ export default function Home() {
               easy access to all the best shopping, dining, and entertainment
               the area has to offer.
             </p>
-            <p className="mt-5 mx-3 mr-4 text-md md:text-sm text-justify font-semibold">
+            <p className="mt-5 mx-3 mr-4 text-md md:text-sm text-justify font-regular">
               At CRYSTALKUTA Hotel – Bali, we pride ourselves on our top-notch
               amenities and outstanding service. Enjoy your stay at our Rooms
               in: Superior, Deluxe, Junior Suite, Suite, Family Suite, and
@@ -117,7 +83,7 @@ export default function Home() {
               Spa, hit it on at our Karaoke, or indulging in a delicious meal at
               our on-site Restaurant, you&apos;ll feel right at home with us.
             </p>
-            <p className="mt-5 mx-3 mr-4 text-md md:text-sm text-justify font-semibold">
+            <p className="mt-5 mx-3 mr-4 text-md md:text-sm text-justify font-regular">
               If you&apos;re looking for a truly memorable stay in Bali, look no
               further than CRYSTALKUTA Hotel – Bali. For business trip,
               vacation, holiday, or romantic trip, CRYSTALKUTA Hotel – Bali will
@@ -125,7 +91,7 @@ export default function Home() {
               your experience with us is nothing short of exceptional and attend
               your unique needs.
             </p>
-            <p className="mx-3 mr-4 text-md md:text-sm text-justify font-semibold">
+            <p className="mx-3 mr-4 text-md md:text-sm text-justify font-regular">
               Live endless entertainment at Kuta&apos;s comfort stay.
             </p>
           </div>
@@ -173,7 +139,7 @@ export default function Home() {
             />
           </div>
           {/* Text Container */}
-          <div className="flex px-6 ps-16 flex-col justify-between w-full md:w-1/2">
+          <div className="flex px-6 lg:ps-16 flex-col justify-between gap-4 lg:gap-11 w-full md:w-1/2">
             <div>
               <div className="py-4 pt-1 pb-1">
                 <h1 className="text-2xl md:text-[45px] font-medium italic">
@@ -185,7 +151,7 @@ export default function Home() {
                   BAR & RESTO
                 </h1>
               </div>
-              <p className="mt-8 mx-3 mr-4 text-md md:text-base text-justify font-medium">
+              <p className="mt-4 lg:mt-8 mx-3 mr-4 text-md md:text-base text-justify font-medium">
                 De&apos;Topaz Bar & Resto Kuta is our semi-indoor restaurant
                 located at Ground Floor of CRYSTALKUTA Hotel – Bali. With a cozy
                 interior and cordial staff, you will feel warm here. Also with a
@@ -196,7 +162,7 @@ export default function Home() {
                 or friends.
               </p>
             </div>
-            <div className="flex gap-4 ms-3 text-[15px]">
+            <div className="flex gap-4 ms-3 text-[12px] lg:text-[15px]">
               <button className="bg-[#c4ae86] border border-[#c4ae86] text-white px-4 py-2 focus:outline-none h-[44px] rounded-sm">
                 EXPLORE MORE
               </button>
@@ -210,7 +176,7 @@ export default function Home() {
         {/* content 3 */}
         <div className="flex flex-col md:flex-row justify-between w-full gap-8 p-5 pt-14 my-10 mb-0 bg-[#F3F4F6]">
           {/* Text Container */}
-          <div className="flex px-6 ps-16 flex-col justify-center gap-11 w-full md:w-1/2">
+          <div className="flex px-6 ps-9 lg:ps-16 flex-col justify-center gap-4 lg:gap-11 w-full md:w-1/2">
             <div>
               <div className="py-4 pt-1 pb-1">
                 <h1 className="text-2xl md:text-[45px] font-medium italic">
@@ -225,7 +191,7 @@ export default function Home() {
                 and feel the tranquillity of water and the surrounding gardens
               </p>
             </div>
-            <div className="flex gap-4 text-[15px]">
+            <div className="flex gap-4 text-[12px] lg:text-[15px]">
               <button className="bg-[#c4ae86] border border-[#c4ae86] text-white px-4 py-2 focus:outline-none h-[44px] rounded-sm">
                 EXPLORE MORE
               </button>
@@ -249,7 +215,7 @@ export default function Home() {
         {/* content 4 */}
         <div className="flex flex-col md:flex-row justify-between w-full gap-8 p-5 pb-12 pt-14 my-10 mb-0 bg-[#F3F4F6]">
           {/* Text Container */}
-          <div className="flex px-6 ps-16 flex-col justify-center gap-11 w-full md:w-1/2">
+          <div className="flex px-6 ps-16 flex-col justify-center gap-4 lg:gap-11 w-full md:w-1/2">
             <div>
               <div className="py-4 pt-1 pb-1">
                 <h1 className="text-2xl md:text-[45px] font-medium italic">
@@ -267,7 +233,7 @@ export default function Home() {
                 to elevate your stay to new heights of excellence.
               </p>
             </div>
-            <div className="flex gap-4 text-[15px]">
+            <div className="flex gap-4 text-[12px] lg:text-[15px]">
               <button className="bg-[#c4ae86] border border-[#c4ae86] text-white px-4 py-2 focus:outline-none h-[44px] rounded-sm">
                 EXPLORE MORE
               </button>
@@ -277,7 +243,7 @@ export default function Home() {
             </div>
           </div>
           {/* Image Carousel */}
-          <div className="flex justify-center md:justify-start w-full h-[310px] md:w-[48.5%] overflow-hidden">
+          <div className="flex justify-center md:justify-start w-full lg:h-[310px] md:w-[48.5%] overflow-hidden">
             <Swiper
               slidesPerView={"auto"}
               spaceBetween={30}
@@ -329,7 +295,7 @@ export default function Home() {
           </div>
 
           {/* Text Container */}
-          <div className="flex px-6 ps-16 flex-col justify-center gap-11 w-full md:w-1/2">
+          <div className="flex px-6 ps-16 flex-col justify-center gap-4 lg:gap-11 w-full md:w-1/2">
             <div>
               <div className="py-4 pt-1 pb-1">
                 <h1 className="text-2xl md:text-[45px] font-medium italic">
@@ -345,7 +311,7 @@ export default function Home() {
                 wonder and delight.
               </p>
             </div>
-            <div className="flex gap-4 text-[15px]">
+            <div className="flex gap-4 text-[12px] lg:text-[15px]">
               <button className="bg-[#c4ae86] border border-[#c4ae86] text-white px-4 py-2 focus:outline-none h-[44px] rounded-sm">
                 EXPLORE MORE
               </button>
@@ -357,16 +323,16 @@ export default function Home() {
         </div>
 
         {/* content 6 */}
-        <div className="flex flex-col md:flex-row justify-between w-full gap-8 p-5 pt-14 my-10 mb-0 bg-[#F3F4F6]">
+        <div className="flex flex-col md:flex-row justify-between w-full gap-8 p-5 py-14 my-10 mb-0 bg-[#F3F4F6]">
           {/* Text Container */}
-          <div className="flex px-6 ps-16 flex-col justify-center gap-11 w-full md:w-1/2">
-            <div>
+          <div className="flex px-6 ps-16 flex-col justify-center gap-4 lg:gap-11 w-full md:w-1/2">
+            <div className="flex flex-col gap-0">
               <div className="py-4 pt-1 pb-1">
                 <h1 className="text-2xl md:text-[45px] font-medium italic">
                   Destination
                 </h1>
               </div>
-              <p className="mt-8 mr-4 text-md md:text-base text-justify font-medium">
+              <p className="mt-4 md:mt-8 mr-4 text-md md:text-base text-justify font-medium">
                 Indulge your senses in the city&apos;s vibrant shopping scene,
                 where designer boutiques, local markets, and artisanal shops
                 beckon with treasures waiting to be discovered. Whether
@@ -375,7 +341,7 @@ export default function Home() {
                 endless.
               </p>
             </div>
-            <div className="flex gap-4 text-[15px]">
+            <div className="flex gap-4 text-[12px] lg:text-[15px]">
               <button className="bg-[#c4ae86] border border-[#c4ae86] text-white px-4 py-2 focus:outline-none h-[44px] rounded-sm">
                 EXPLORE MORE
               </button>
@@ -385,7 +351,7 @@ export default function Home() {
             </div>
           </div>
           {/* Image Container */}
-          <div className="flex justify-center md:justify-start w-full h-[310px] md:w-[48.5%] overflow-hidden">
+          <div className="flex justify-center md:justify-start w-full lg:h-[310px] md:w-[48.5%] overflow-hidden">
             <Swiper
               slidesPerView={"auto"}
               spaceBetween={30}
