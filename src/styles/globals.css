@@ -5,23 +5,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --navtextcolor : #c4ae86
+  --navtextcolor: #c4ae86;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ffffff;
-    --navtextcolor : #c4ae86
+    --navtextcolor: #c4ae86;
   }
 }
 
 body {
   color: var(--foreground);
-  font-family: 'Cardo'; /* Fallback to a sans-serif font */
+  font-family: "Cardo"; /* Fallback to a sans-serif font */
 }
 
-.nav-text{
+.nav-text {
   color: var(--navtextcolor);
 }
 
@@ -29,4 +29,62 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Homepage */
+@keyframes bounce45deg {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(45deg); /* Initial position */
+  }
+  50% {
+    transform: translate(0px, 10px) rotate(45deg); /* Move 45 degrees */
+  }
+}
+
+.animate-bounce-45deg {
+  animation: bounce45deg 1s infinite;
+}
+
+.left-button {
+  rotate: 135deg;
+}
+
+.right-button {
+  rotate: -45deg;
+}
+
+.swiper {
+  width: 80%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide:nth-child(1n){
+  width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+  width: 80%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 80%;
 }
